@@ -1,0 +1,9 @@
+import bpy
+import os
+
+folder_path = "Z:\Py Projs"
+
+for file in os.listdir(folder_path):
+    if file.endswith(".fbx"):
+        file_path = os.path.join(folder_path, file)
+        bpy.ops.import_scene.gltf(filepath=file_path)
